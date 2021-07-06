@@ -1,9 +1,9 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import legacy from '@vitejs/plugin-legacy'
-import path from 'path'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import legacy from '@vitejs/plugin-legacy';
+import path from 'path';
 
-const resolvePath = (dir: string) => path.resolve(__dirname, dir)
+const resolvePath = (dir: string) => path.resolve(__dirname, dir);
 
 export default defineConfig({
   root: process.cwd(), // default
@@ -18,8 +18,15 @@ export default defineConfig({
   plugins: [vue(), legacy()],
   resolve: {
     alias: {
-      '@': resolvePath('src')
-    }
+      '@': resolvePath('src'),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "src/assets/style/index.scss";`,
+      },
+    },
   },
   server: {
     host: '0.0.0.0',
@@ -29,9 +36,9 @@ export default defineConfig({
       '/api': {
         target: 'http://jsonplaceholder.typicode.com',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      }
-    }
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   build: {
     outDir: 'dist', // default
@@ -45,7 +52,7 @@ export default defineConfig({
     // 设置为false，提高构建性能
     brotliSize: false,
     // chunk 大小警告的限制（以 kbs 为单位）。
-    chunkSizeWarningLimit: 500
+    chunkSizeWarningLimit: 500,
   },
-  optimizeDeps: {}
-})
+  optimizeDeps: {},
+});
