@@ -192,7 +192,7 @@ module.exports = {
 };
 ```
 
-设置 Git Hooks
+使用`husky`设置[Git Hooks](https://www.prettier.cn/docs/install.html#git-hooks)
 
 ```bash
 yarn add husky -D
@@ -201,6 +201,23 @@ yarn husky install
 npx husky add .husky/pre-commit "yarn lint-staged"
 npx husky add .husky/commit-msg "yarn commitlint"
 ```
+
+修改`package.json`
+
+```json
+"scripts": {
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint -e -V",
+  },
+"lint-staged": {
+    "src/**/*.{ts,vue,md,json}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  }
+```
+
+现在使用 GIT 时，便会前置使用提交规范
 
 # vite preview
 

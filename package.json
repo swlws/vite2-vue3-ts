@@ -7,8 +7,7 @@
     "view": "vite preview",
     "cz": "git cz",
     "lint-staged": "lint-staged",
-    "commitlint": "commitlint -e -V",
-    "prepare": "husky install"
+    "commitlint": "commitlint -e -V"
   },
   "dependencies": {
     "vue": "^3.0.5",
@@ -45,9 +44,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue,md,json}": [
+    "src/**/*.{ts,vue,md,json}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write --ignore-unknown"
     ]
   }
 }
