@@ -1,11 +1,13 @@
 {
   "private": true,
   "version": "0.0.0",
+  "description": "vite2 vue3 typescript, spa",
   "scripts": {
     "serve": "vite",
     "build": "vue-tsc --noEmit && vite build --mode production",
     "view": "vite preview",
     "cz": "git cz",
+    "prepare": "husky install",
     "lint-staged": "lint-staged",
     "commitlint": "commitlint -e -V"
   },

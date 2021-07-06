@@ -223,6 +223,6 @@ npx husky add .husky/commit-msg "yarn commitlint"
 
 # vite preview
 
-vite 打包后的文件，默认使用的`import`，直接在浏览器打开`index.html`，浏览器会将 import 解析为 http 请求，控制台一对报错。
+vite 打包后的文件，默认使用的`import`，直接在浏览器打开`index.html`，浏览器会将 import 解析为 http 请求，控制台一堆报错。
 
 vite 通过`vite preview`启动一个 web 服务，可以在浏览器中预览打包后的页面。
