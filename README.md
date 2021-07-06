@@ -116,12 +116,12 @@ module.exports = {
 
 eslint 默认的解析器为`[espree](https://github.com/eslint/espree)`，这里修改为`vue-eslint-parser`。`eslint-plugin-vue`依赖`vue-eslint-parser`，这里无需重复安装。
 
-**添加`prettier.config.js`**
+**添加`.prettierrc.js`**
 
 [配置指南](https://www.prettier.cn/docs/options.html)
 
 ```js
-// prettier.config.js
+// .prettierrc.js
 module.exports = {
   printWidth: 100,
   tabWidth: 2,
@@ -144,6 +144,8 @@ module.exports = {
 # 五、GIT 提交规范
 
 ## 5.1、扩展 git 命令
+
+参考：[commitizen Introduction](https://commitizen-tools.github.io/commitizen/)
 
 扩展命令`git cz`，按照规范提交变更。依赖：
 
