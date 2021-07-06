@@ -1,0 +1,6 @@
+# Browsers that we support
+# see real version can run `npx browserslist`
+
+> 0.25%
+not dead
+not IE 11
