@@ -2,10 +2,12 @@
   "private": true,
   "version": "0.0.0",
   "description": "vite2 vue3 typescript, spa",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "serve": "vite",
-    "build": "vue-tsc --noEmit && vite build --mode production",
-    "view": "vite preview",
+    "serve:project": "yarn workspace project run serve",
+    "build:project": "yarn workspace project run build",
     "cz": "git cz",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
@@ -13,6 +15,7 @@
   },
   "dependencies": {
     "vue": "^3.0.5",
+    "vue-router": "4",
     "weblibext": "^1.0.5"
   },
   "license": "MIT",

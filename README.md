@@ -221,6 +221,10 @@ npx husky add .husky/commit-msg "yarn commitlint"
 
 现在使用 GIT 时，便会前置使用提交规范
 
+# 六、使用 monorepo
+
+启用 workspace，管理多工程
+
 # vite preview
 
 vite 打包后的文件，默认使用的`import`，直接在浏览器打开`index.html`，浏览器会将 import 解析为 http 请求，控制台一堆报错。

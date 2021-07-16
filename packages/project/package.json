@@ -1,0 +1,11 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build --mode production",
+    "view": "vite preview"
+  }
+}
