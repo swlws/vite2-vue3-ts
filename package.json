@@ -37,8 +37,7 @@
     "sass": "^1.35.1",
     "typescript": "^4.3.2",
     "vite": "2.3.8",
-    "vue-eslint-parser": "^7.7.2",
-    "vue-tsc": "^0.0.24"
+    "vue-eslint-parser": "^7.7.2"
   },
   "config": {
     "commitizen": {
