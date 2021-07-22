@@ -6,14 +6,10 @@
     "packages/*"
   ],
   "scripts": {
-    "serve:project": "yarn workspace project run serve",
-    "build:project": "yarn workspace project run build",
     "api": "apidoc -i shared/api -o api-doc",
-    "serve:sds": "yarn workspace sds-client run serve",
-    "build:sds": "rimraf dist/sds-client && yarn workspace sds-client run build",
     "serve:test": "yarn workspace test-client run serve",
     "build:test": "rimraf dist/test-client && yarn workspace test-client run build",
-    "build:all": "yarn build:st && yarn build:sds",
+    "build:all": "yarn build:test",
     "cz": "git cz",
     "prepare": "husky install",
     "lint-staged": "lint-staged",
