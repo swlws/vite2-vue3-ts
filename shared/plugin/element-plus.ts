@@ -1,6 +1,7 @@
 import { App } from 'vue';
-// import 'element-plus/packages/theme-chalk/src/base.scss';
+// 两个样式都需要引入，否则组件样式、ICON总有一个不能用，fuck
 import 'element-plus/lib/theme-chalk/index.css';
+import 'element-plus/packages/theme-chalk/src/base.scss';
 
 import lang from 'element-plus/lib/locale/lang/zh-cn';
 import 'dayjs/locale/zh-cn';

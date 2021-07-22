@@ -1,0 +1,14 @@
+{
+  "name": "test-client",
+  "private": true,
+  "version": "0.0.0",
+  "description": "VUE 3 工程模版",
+  "scripts": {
+    "serve": "vite --config ../../vite/test.vite.config.ts",
+    "build": "vite build --config ../../vite/test.vite.config.ts --mode production"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "swl"
+  }
+}
