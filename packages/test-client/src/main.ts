@@ -1,3 +1,5 @@
+import '~/tool/exception';
+import '~/tool/history';
 import { createApp } from 'vue';
 import elementPlus from '~/plugin/element-plus';
 import { getAppTitle } from '~/tool/env';
