@@ -11,12 +11,13 @@ type Module = Record<
 >;
 
 function getAppApi(name: string): Module {
-  switch (name) {
-    case 'test-client':
-      return import.meta.globEager('./test-client/*.ts');
-    default:
-      throw new Error(`Project Name (${name}) Is Illegal`);
+  const ps = import.meta.globEager('./**/*.ts');
+
+  const map: Module = {};
+  for (let key in ps) {
+    if (key.includes(name)) map[key] = ps[key];
   }
+  return map;
 }
 
 export function useApiModule() {

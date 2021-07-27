@@ -74,13 +74,7 @@ window.addEventListener('unhandledrejection', (ev) => {
 // ******************用户行为-用户页面点击******************
 
 const userOpListener = (eventName: string) => {
-  let lastEl: any = null;
   return function (event: Event) {
-    if (lastEl === event) {
-      return;
-    }
-
-    lastEl = event;
     let target;
     try {
       target = event.target;
@@ -92,9 +86,7 @@ const userOpListener = (eventName: string) => {
     console.log({
       eventName,
       time: time.parseTime(new Date()),
-      message: {
-        target,
-      },
+      target,
     });
   };
 };

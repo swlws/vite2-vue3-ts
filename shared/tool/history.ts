@@ -1,4 +1,5 @@
 import { Dep, Watch } from './pub-sub';
+const isDevelopment = import.meta.env.MODE === 'development';
 
 const historyChangeHandler = () => {
   console.log(`Current Href: ${location.href}`);
@@ -7,15 +8,17 @@ const historyChangeHandler = () => {
 /**
  * onpopstate可以监听history.back()、history.go()、history.forward()
  */
-let originOnPopState = window.onpopstate;
-window.onpopstate = function (...args) {
-  historyChangeHandler();
+if (isDevelopment) {
+  let originOnPopState = window.onpopstate;
+  window.onpopstate = function (...args) {
+    historyChangeHandler();
 
-  if (originOnPopState) {
-    return (originOnPopState as any).apply(this, args);
-  }
-  return null;
-};
+    if (originOnPopState) {
+      return (originOnPopState as any).apply(this, args);
+    }
+    return null;
+  };
+}
 
 /**
  * 重写pushState、replaceState方法，监听路由变化
@@ -44,9 +47,11 @@ const addHistoryMethod: Func = (function () {
   };
 })();
 
-const history = window.history as any;
-history.pushState = addHistoryMethod('pushState');
-history.replaceState = addHistoryMethod('replaceState');
+if (isDevelopment) {
+  const history = window.history as any;
+  history.pushState = addHistoryMethod('pushState');
+  history.replaceState = addHistoryMethod('replaceState');
 
-// 自定义响应路由的变化
-addHistoryMethod('historychange')(historyChangeHandler);
+  // 自定义响应路由的变化
+  addHistoryMethod('historychange')(historyChangeHandler);
+}
