@@ -1,4 +1,4 @@
-import '~/tool/exception';
+import '~/tool/moniter';
 import '~/tool/history';
 import { createApp } from 'vue';
 import elementPlus from '~/plugin/element-plus';

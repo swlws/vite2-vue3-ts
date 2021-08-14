@@ -19,5 +19,6 @@ module.exports = {
   },
   rules: {
     'prettier/prettier': ['error', { vueIndentScriptAndStyle: false }],
+    'prefer-const': 0,
   },
 };
