@@ -3,7 +3,7 @@ import '~/tool/history';
 import { createApp } from 'vue';
 import elementPlus from '~/plugin/element-plus';
 import { getAppTitle } from '~/tool/env';
-import components from '@/components';
+import components from '@test/components';
 import App from './App.vue';
 import router from './router';
 

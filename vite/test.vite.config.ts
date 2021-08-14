@@ -11,7 +11,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': path.resolve(__dirname, '..', 'shared'),
-      '@': path.resolve(__dirname, '..', 'packages', CLIENT_NAME, 'src'),
+      '@test': path.resolve(__dirname, '..', 'packages', CLIENT_NAME, 'src'),
     },
   },
   plugins: usePlugins(),

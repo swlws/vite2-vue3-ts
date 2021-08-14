@@ -11,12 +11,3 @@
  * 普通对象
  */
 export type PlainObject = Record<string, any>;
-
-/**
- * HTTP响应体
- */
-export type THttpResponse = {
-  r0: number;
-  r1: '';
-  res?: PlainObject;
-};
