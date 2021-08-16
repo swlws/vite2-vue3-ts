@@ -1,6 +1,6 @@
 import { BuildOptions, CSSOptions, UserConfigExport } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import checker from 'vite-plugin-checker';
+// import checker from 'vite-plugin-checker';
 import legacy from 'vite-plugin-legacy';
 import styleImport from 'vite-plugin-style-import';
 import viteCompression from 'vite-plugin-compression';
@@ -68,7 +68,7 @@ export function usePlugins() {
     // https://github.com/anncwb/vite-plugin-compression/issues/6
     // https://www.npmjs.com/package/vite-plugin-compression
     viteCompression(),
-    checker({ typescript: true }),
+    // checker({ typescript: true }),
   ];
 }
 
