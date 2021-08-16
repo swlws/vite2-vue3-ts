@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "axios-business": "^1.0.3",
-    "element-plus": "^1.0.2-beta.55",
+    "element-plus": "^1.0.2-beta.70",
     "vue": "^3.2.2",
     "vue-router": "4",
     "weblibext": "^2.0.0"
